@@ -282,6 +282,7 @@ jobs:
     with:
       RUNNER: self-hosted-azure-cpu
       SCRIPT: |
+        pip3 uninstall triton
         CUDA_VISIBLE_DEVICES="" NEMO_NUMBA_MINVER=0.53 pytest tests/collections/llm -m "not pleasefixme" --cpu --with_downloads --relax_numba_compat --cov-branch --cov-report=xml --cov=nemo
 
   L0_Unit_Tests_CPU_Multimodal:
