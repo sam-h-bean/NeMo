@@ -159,7 +159,7 @@ class HFMistralImporter(io.ModelConnector["MistralForCausalLM", MistralModel]):
         """ """
         from nemo.collections.common.tokenizers.huggingface.auto_tokenizer import AutoTokenizer
 
-        return AutoTokenizer(self.save_hf_tokenizer_assets(str(self)))
+        return AutoTokenizer(self.save_hf_tokenizer_assets(str(self)), use_fast=True)
 
     @property
     def config(self) -> MistralConfig7B:
