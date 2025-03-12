@@ -21,7 +21,6 @@ from datasets import Dataset, DatasetDict, load_dataset
 from torch.utils.data import DataLoader
 from torch.utils.data.distributed import DistributedSampler
 
-from nemo.lightning.pytorch.plugins import MegatronDataSampler
 from nemo.utils import logging
 
 
